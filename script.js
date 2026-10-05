@@ -8,9 +8,23 @@
     year.textContent = String(new Date().getFullYear());
   }
 
+  let lastY = window.scrollY;
+
   const onScroll = () => {
     if (!header) return;
-    header.classList.toggle("is-scrolled", window.scrollY > 24);
+    const y = window.scrollY;
+    const menuOpen = nav && nav.classList.contains("is-open");
+    header.classList.toggle("is-scrolled", y > 24);
+
+    const delta = y - lastY;
+    if (Math.abs(delta) < 8) return;
+
+    if (y < 48 || menuOpen || delta < 0) {
+      header.classList.remove("is-hidden");
+    } else {
+      header.classList.add("is-hidden");
+    }
+    lastY = y;
   };
 
   onScroll();
