@@ -1791,6 +1791,11 @@ strong {
   max-width: none;
 }
 
+.footer-copy {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
 /* Reveal animation */
 .reveal {
   opacity: 0;
