@@ -1,0 +1,11 @@
+{
+  "default": "osaweb.ir",
+  "sites": {
+    "osaweb.ir": {
+      "site_id": "01kyhpa4tt5xmz5gg2x8g89c5s",
+      "domain": "osaweb.ir",
+      "deploy_branch": "main",
+      "workspace_name": "فضای کاری سید"
+    }
+  }
+}
